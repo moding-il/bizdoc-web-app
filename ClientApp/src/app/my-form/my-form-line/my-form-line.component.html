@@ -1,0 +1,10 @@
+<form [formGroup]="form" fxLayout="column">
+  <mat-form-field>
+    <input matInput placeholder="Amount" formControlName="value" required />
+    <mat-error *ngIf="form.controls.value.hasError('required')">Amount is required.</mat-error>
+  </mat-form-field>
+  <div>
+    <button mat-button (click)="close()">Cancel</button>
+    <button mat-button (click)="ok()">OK</button>
+  </div>
+</form>
