@@ -1,10 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using BizDoc.Configuration;
 using BizDoc.Configuration.Annotations;
 using BizDoc.Core.Configuration.Models;
-    using BizDoc.Core.Models;
+using BizDoc.Core.Models;
+using WebApp.Data;
 
 namespace WebApp.Models
 {
@@ -26,19 +25,19 @@ namespace WebApp.Models
 
         }
     }
-/// <summary>
-/// Data source
-/// </summary>
-public class Accounts : TypeBase<string, string, string>
-{
-    private readonly CustomStore _store;
-
-    public Accounts(CustomStore store)
+    /// <summary>
+    /// Data source
+    /// </summary>
+    public class Accounts : TypeBase<string, string, string>
     {
-        _store = store;
+        private readonly CustomStore _store;
+
+        public Accounts(CustomStore store)
+        {
+            _store = store;
+        }
+
+        public override Task<Dictionary<string, string>> GetValuesAsync(string args) =>
+            _store.Accounts.ToDictionaryAsync(a => a.Id, a => a.Name);
     }
-    
-    public override Task<Dictionary<string, string>> GetValuesAsync(string args) => 
-        _store.Accounts.ToDictionaryAsync(a => a.Id, a => a.Name);
-}
 }
