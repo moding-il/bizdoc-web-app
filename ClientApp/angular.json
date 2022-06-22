@@ -33,7 +33,7 @@
               },
               {
                 "glob": "*",
-                "input": "./node_modules/@bizdoc/core/assets/cldr-data/main/he",
+                "input": "./node_modules/@bizdoc/core/assets/i18n/cldr-data/main/he",
                 "output": "./assets/i18n/cldr-data/main/he"
               },
               {
