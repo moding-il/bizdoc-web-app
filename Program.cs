@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+var connectionString = builder.Configuration.GetConnectionString("BizDoc");
 
 // Add services to the container.
 builder.Services.AddBizDoc(options =>
@@ -41,7 +41,6 @@ app.UseHttpsRedirection();
 app.UseDeveloperExceptionPage();
 app.UseBizDoc().
     UseFormIdentity();
-app.UseCors();
-app.MapFallbackToFile("index.html"); ;
+app.MapFallbackToFile("index.html");
 
 app.Run();

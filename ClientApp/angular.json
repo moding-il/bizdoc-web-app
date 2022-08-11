@@ -43,8 +43,8 @@
               },
               {
                 "glob": "*",
-                "input": "./node_modules/@bizdoc/core/assets/sounds",
-                "output": "./assets/animations"
+                "input": "./node_modules/@bizdoc/core/assets/system",
+                "output": "./assets/system"
               },
               {
                 "glob": "*",
