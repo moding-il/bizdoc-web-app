@@ -17,12 +17,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BizDoc.Core" Version="6.3.21" />
-    <PackageReference Include="BizDoc.Core.SqlServer" Version="6.3.4" />
-    <PackageReference Include="BizDoc.Core.FormIdentity" Version="6.3.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite" Version="6.0.2" />
-    <PackageReference Include="Microsoft.AspNetCore.SpaProxy" Version="6.0.2" />
+    <PackageReference Include="BizDoc.Core" Version="6.7.21" />
+    <PackageReference Include="BizDoc.Core.SqlServer" Version="6.7.4" />
+    <PackageReference Include="BizDoc.Core.FormIdentity" Version="6.6.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite" Version="6.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaProxy" Version="6.0.8" />
   </ItemGroup>
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
